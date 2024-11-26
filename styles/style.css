@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+    --background: #030f29;
+    --gray: #EAEAEC;
+    --primary: #29283F;
+    --primary-violet: #7370F4;
+    --fuente-inter: "Inter", sans-serif;
+    --fuente-poppins: "Poppins", sans-serif;
+  }
+body{
+    background-color:#ffffff ;
+    height: 100vh;
+}
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+header {
+    background:#030f29 ;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  } 
+  .barra-menu {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    padding: 0.2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+.navegacion-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+  }
+.navegacion-menu ul li{
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 25px;
+}  
+li:first-child:hover {
+	border-left:none;
+}
+.navegacion-menu ul li a{
+    display: block;
+    /*padding: 10px;*/
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--fuente-poppins, sans-serif);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.navegacion-menu ul li:hover{
+    background:rgba(0,0,0,0.3);
+    border-right:1px solid transparent;
+    border-left:1px solid transparent;
+    border-bottom:none;
+    transition: background 0.3s ease;
+}
+
+
+
+
+/* estilos de la tarjeta */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* 100% de la altura de la pantalla */
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    border-radius: 1.5rem;
+    background-color: rgb(210, 223, 175);
+    /*cursor: pointer;*/
+    overflow: hidden;
+    transition: all 0.3s;
+    max-width: clamp(25rem, 80vw, 50rem);
+    min-width: 25rem;
+    min-height: 17.5rem;
+    width: 50vw;
+
+}
+.card:hover{
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.background{
+    flex: 1 1 15rem;
+}
+.background img{
+    width: 100%;
+    height: 100%;
+    align-content: first baseline;
+}
+.perfil{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: multiply;
+
+}
+.content{
+    flex: 3 1 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1rem;    
+}
+.content > h2{
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+        font-weight: 700;
+        margin-bottom: clamp(0.35rem, 2vw,0.55rem);
+}
+.content > p{
+    font-size: clamp(1rem, 1.75vw, 1.1rem);
+    font-weight: 400;
+    margin: 0.4rem 0;
+}
+.content a{
+    color: var(--primary-violet);
+}
+.chips{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0.75rem 0px 1rem 0px;
+}
+.chip{
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9375rem;
+    background: var(--gray);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+.chip:hover{
+    background: var(--primary-violet);
+    color: var(--gray);
+}
+.action-buttons{
+    border-top: 1px solid var(--gray);
+    padding-top: 1rem;
+    gap: 0.75rem;
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+.action-buttons a{
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    outline: none;
+    border: none;
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    flex: 1 0 15rem;
+    max-width: 100%;
+}
+.action-buttons a:hover{
+    text-decoration: underline;
+}
+.action-buttons a.secondary{
+    background-color: inherit;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    flex: 1 0 5rem;
+}
+
+/*estilo sobre mi*/
+.sobre-mi{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para mayor profundidad */
+    border-radius: 10px; /* Bordes redondeados */
+    font-family: var(--fuente-inter, sans-serif); /* Fuente desde las variables */
+
+}
+.sobre-mi h2 {
+    font-size: 2rem; 
+    color: var(--primary); /* Color principal */
+    margin-bottom: 1rem;
+}
+.sobre-mi p {
+    font-size: 1.1rem; /* Fuente ligeramente más grande */
+    color: #333; /* Color de texto oscuro */
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 700px;
+}
+
+/*inicio carrusel*/
+.seccion_carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background-color: #333;
+}
+
+.carrusel {
+    position: relative;
+    width: 30%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagenes img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    flex-shrink: 0; /* Evita que las imágenes se compriman */
+}
+
+.puntos {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.punto {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(159, 241, 6, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.punto.active {
+    background-color: #fff;
+}
+/*fin carrusel*/
+
+/*Habilidades*/
+.seccion_imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 20px; /* Espaciado entre columnas */
+    justify-items: center; /* Centrar las columnas */
+    padding: 20px;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column; /* Colocar las imágenes en columna dentro de cada div */
+    gap: 20px; /* Espaciado entre imágenes y texto */
+}
+.imagen-con-texto {
+    text-align: center; /* Centrar el texto debajo de la imagen */
+}
+
+.imagen-con-texto img {
+    width: 100%; /* Ajusta el ancho de las imágenes al contenedor */
+    max-width: 200px; /* Limita el ancho máximo de las imágenes */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    aspect-ratio: 1;
+    
+
+}
+
+.imagen-con-texto p {
+    margin-top: 8px; /* Espacio entre la imagen y el texto */
+    font-size: 1rem; /* Tamaño de fuente para el texto */
+    color: #333; /* Color del texto */
+    font-size: 30px;
+}
+.imagen-con-texto p:hover{
+    background: var(--primary-violet);
+    color: var(--gray);
+}
+
+/*estilo aficiones*/
+.aficiones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra horizontalmente */
+    flex-wrap: wrap; /* Asegura que sea responsivo */
+    background-color: #ebf4f7;
+    font-size: 1.5rem;
+  }
+  .aficiones h2{
+    font-size: 2rem;
+    
+  }
+  .aficiones__icono{
+    border-radius: 35px;
+    border-color: #45a049 px;
+    padding: 20px;
+  }
+
+.barra-divisoria {
+    width: 100%;         /* Ocupa todo el ancho */
+    height: 8px;         /* Alto de la barra */
+    background-color: #ff5733; /* Color de la barra */
+    margin: 1rem 0;      /* Espacio alrededor de la barra */
+  }
+/*estilo formaciones*/
+.formacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+  }
+  .formacion h2{
+    font-size: 2rem;
+  }
+  
+.formacion__icono{
+    height: 50px;
+    mix-blend-mode: multiply;
+}
+/*estilo proyectos*/
+.barra-divisoria2 {
+    width: 100%;         /* Ocupa todo el ancho */
+    height: 8px;         /* Alto de la barra */
+    background-color: #26c20b; /* Color de la barra */
+    margin: 1rem 0;      /* Espacio alrededor de la barra */
+  }
+
+.proyectos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+    font-size: 25px;
+    font-family: var(--fuente-inter);
+  }
+.proyectos h2{
+    font-size: 2rem;
+}
+.proyectos h3{
+    font-size: 2rem;
+}
+.dotted-line {
+    border: none;           /* Elimina cualquier borde predeterminado */
+    border-top: 2px dotted rgb(5, 164, 98); /* Línea punteada de 2px de grosor y color negro */
+    margin: 20px 0;         /* Espaciado arriba y abajo de la línea */
+    width: 100%;            /* Ocupa todo el ancho del contenedor */
+  }
+  
+.If1{
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 70vh; /* Ocupa el 100% de la altura de la ventana */
+    border: none; /* Elimina el borde del iframe */
+    
+}
+.If2{
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 70vh; /* Ocupa el 100% de la altura de la ventana */
+    border: none; /* Elimina el borde del iframe */
+}
+.If3{
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 50vh; /* Ocupa el 100% de la altura de la ventana */
+    border: none; /* Elimina el borde del iframe */
+}
+
+/*Sección de Contacto*/
+/* Estilo general de la sección de contacto */
+.contacto {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contacto__titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo del formulario */
+.contacto__formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto__campo {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Cambios al enfocar un campo */
+.contacto__campo:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Campo de texto más grande */
+.contacto__campo--textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Botón de envío */
+.contacto__boton {
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Efecto al pasar el ratón sobre el botón */
+.contacto__boton:hover {
+    background-color: #45a049;
+}
+/*estilo del footer*/
+footer {
+    background-color: #0A0A0A;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-container h2{
+    text-align: center;
+}
+.footer-container p{
+    text-align: center;
+}
+.footer-copyright{
+    padding: 20px;
+}
+/* Cambia a columnas en pantallas grandes */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
+.footer-container div {
+    margin-bottom: 10px;
+}
+.footer-info p {
+    margin: 10px 0;
+    text-align: justify;
+}
+.footer-social a {
+    display: inline-block;
+    margin: 0 15px; /* Más espacio entre enlaces */
+    color: #1DA1F2;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+.footer-social a:hover {
+    color: #fff;
+}
+.footer-contact a {
+    color: #c7d40c;
+    text-decoration: none;
+}
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+/* Ajustes responsivos */
+
+
+@media (max-width: 600px) {
+    .chip {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.4rem;
+    }
+    .action-buttons a {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navegacion-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacion-menu ul li {
+        width: 100%;
+        padding: 0.5rem 0; /* Reduce el padding para pantallas pequeñas */
+    }
+     
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer p {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #bbb;
+    }
+    
+    .contacto__titulo {
+            font-size: 1.8rem;
+        }
+    
+        .contacto__formulario {
+            padding: 0 10px;
+        }
+    }
+    /* Cambia a columnas en pantallas grandes */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
+
+.footer-container div {
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 15px; /* Más espacio entre enlaces */
+    color: #1DA1F2;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-contact a {
+    color: #c7d40c;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+    

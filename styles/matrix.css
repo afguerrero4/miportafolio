@@ -1,0 +1,55 @@
+header {
+    color: blanchedalmond;
+    opacity: 0.9;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    z-index: 1000;
+}
+
+body {
+    background-color: black;
+    color: rgb(21, 255, 21);
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    padding-top: 60px; /* Ajusta según la altura de tu header */
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    margin: 0;
+}
+
+.column {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+.character {
+    display: block;
+    color: green;          /* Color de los caracteres */
+    font-size: 20px;       /* Tamaño de los caracteres */
+    line-height: 1.2em;    /* Espaciado entre letras */
+    opacity: 0.8;          /* Transparencia de los caracteres */
+    font-family: 'Courier New', Courier, monospace;
+}
+.rain-container {
+    position: absolute;
+    width: 100%; /* Ancho dinámico calculado en JavaScript */
+    height: 50vh; /* Altura de la mitad de la pantalla */
+    overflow: hidden;
+}
