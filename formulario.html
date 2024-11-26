@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <link rel="stylesheet" href="styles/formulario.css">
+    <script src="scripts/formulario.js" ></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta de Satisfacción</h1>
+        <form id="survey-form">
+            <label for="satisfaction">¿Qué tan satisfecho estás con nuestro servicio?</label>
+            <select id="satisfaction" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="muy-satisfecho">Muy Satisfecho</option>
+                <option value="satisfecho">Satisfecho</option>
+                <option value="neutral">Neutral</option>
+                <option value="insatisfecho">Insatisfecho</option>
+                <option value="muy-insatisfecho">Muy Insatisfecho</option>
+            </select>
+
+            <label for="comments">Comentarios adicionales:</label>
+            <textarea id="comments" rows="4"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="response" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

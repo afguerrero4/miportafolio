@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!--Basic Metas-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!--Mobile Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Site Metas-->
+    <meta name="keywords" content="desarrollo web, html, css, JavaScript, portafolio"/>
+    <meta name="description" content="Portafolio de un desarrollador web"/>
+    <meta name="author" content="Andrés Felipe Guerrero Henao"/>
+ <!--Icono del sitio web-->
+ <link rel="icon" href="images/favicon.ico">
+
+<!--stylesheets-->
+<link rel="stylesheet" href="styles/reset.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+<title>Mi portafolio</title>
+</head>
+
+<body>
+<!-- Menú -->
+<header>
+    <section class="barra-menu">
+        <nav class="navegacion-menu" role="navigation" aria-label="Menú principal">
+            <ul class="listas-menu">
+                <li><img class="logo" src="images/Imagen1.png" alt="logo de marca"></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#aficiones">Aficiones</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+
+<!--Comienza la tarjeta de presentación-->
+<main>
+    <section class="container">
+        <article class="card">
+            <figure class="background">
+                <img class="perfil" src="images/perfil.jpg" alt="perfil" loading="lazy">
+            </figure>
+
+            <div class="content">
+                <h1>Andrés Felipe Guerrero Henao</h1>
+                <p>Programador en formación en: <a href="https://www.aluracursos.com/"><strong>Alura</strong></a></p>
+                <p>Aprendiendo:</p>
+                <ul class="chips">
+                    <li class="chip">HTML</li>
+                    <li class="chip">CSS</li>
+                    <li class="chip">JS</li>
+                </ul>
+                <div class="action-buttons">
+                    <a href="https://www.linkedin.com/in/andr%C3%A9s-felipe-guerrero-henao-5a505979/" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="https://github.com/afguerrero4" class="secondary" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+<!-- Sección sobre mí -->
+<section class="sobre-mi" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Nací en un pueblo agrícola llamado <b>la Unión</b>, Antioquia - Colombia.
+        Me criaron en otro pueblo frío llamado Sonsón y desde el 2005 vivo en Medellín, la capital del departamento de Antioquia.
+        Estudié un bachillerato musical y desde 2010 me interesé por las tecnologías y las redes de telecomunicaciones.
+        A partir de este momento me ha gustado la interacción web y los diseños de sitios llamativos e interactivos.</p>
+</section>
+
+<!--seccion del carrusel-->
+
+<section class="seccion_carrusel">
+    
+    <div class="carrusel">
+        <div class="imagenes">
+            <img src="images/1.jpg" alt="Imagen 1">
+            <img src="images/2.jpg" alt="Imagen 2">
+            <img src="images/3.jpg" alt="Imagen 3">
+            <img src="images/4.jpg" alt="Imagen 4">
+            <img src="images/5.jpg" alt="Imagen 5">
+            <img src="images/6.jpg" alt="Imagen 6">
+        </div>
+        <div class="puntos">
+            <span class="punto" data-index="0"></span>
+            <span class="punto" data-index="1"></span>
+            <span class="punto" data-index="2"></span>
+            <span class="punto" data-index="3"></span>
+            <span class="punto" data-index="4"></span>
+            <span class="punto" data-index="5"></span>
+        </div>
+    </div>
+</section>
+
+
+<!-- Sección de Habilidades -->
+<section class="seccion_imagenes">
+    <div class="columna">
+        <div class="imagen-con-texto">
+            <img class="html_icono" src="images/html.png" alt="HTML">
+            <p>HTML</p>
+        </div>
+        <div class="imagen-con-texto">
+            <img class="css_icono" src="images/React.png" alt="React icono">
+            <p>React</p>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="imagen-con-texto">
+            <img class="css_icono" src="images/css.png" alt="css icono">
+            <p>CSS</p>
+        </div>
+        <div class="imagen-con-texto">
+            <img class="mtto_icono" src="images/mtto.png" alt="mtto icono" >
+            <p>Mantenimiento</p>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="imagen-con-texto">
+            <img class="js_icono" src="images/js.jpg" alt="cjs icono" >
+            <p>JavaScript</p>
+        </div>
+        <div class="imagen-con-texto">
+            <img class="mtto_icono" src="images/solproblemas.jpg" alt="Solución de problemas">
+            <p>Solución de problemas</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Sección de Aficiones -->
+<section class="aficiones" id="aficiones">
+    <h2 class="aficiones__titulo">Aficiones</h2>
+    <ul class="aficiones__lista">
+        <li class="aficiones__elemento">
+            <img class="aficiones__icono" src="images/3d.jpg" alt="Patinaje">
+            <p class="aficiones__nombre">Diseño 3D</p>
+        </li>
+        <li class="aficiones__elemento">
+            <img class="aficiones__icono" src="images/viajar.jpg" alt="Tocar bajo">
+            <p class="aficiones__nombre">Viajar en moto</p>
+        </li>
+        <li class="aficiones__elemento">
+            <img class="aficiones__icono" src="images/construir.jpg" alt="Oír música">
+            <p class="aficiones__nombre">Construir cosas</p>
+        </li>
+        <li class="aficiones__elemento">
+            <img class="aficiones__icono" src="images/peliculas.jpg" alt="Ver series">
+            <p class="aficiones__nombre">Ver peliculas</p>
+        </li>
+    </ul>
+
+
+
+</section>
+<div class="barra-divisoria"></div>
+
+<!-- Sección de Formación académica -->
+<section class="formacion" id="formacion">
+    <h2 class="formacion__titulo">Formación académica</h2>
+    <ul class="formacion__lista">
+        <li class="formacion__elemento">
+            <img class="formacion__icono" src="images/sena.jpg" alt="UFPR">
+            <div>
+                <h3 class="formacion__nombre">Mantenimiento y reparación de equipos de computo</h3>
+                <p class="formacion__detalle">2012 - SENA</p>
+            </div>
+        </li>
+        <li class="formacion__elemento">
+            <img class="formacion__icono" src="images/sena.jpg" alt="Alura">
+            <div>
+                <h3 class="formacion__nombre">Tecnólogo en gestión de redes de datos</h3>
+                <p class="formacion__detalle">2016 - SENA</p>
+            </div>
+        </li>
+        <li class="formacion__elemento">
+            <img class="formacion__icono" src="images/alura.jpg" alt="UFRJ">
+            <div>
+                <h3 class="formacion__nombre">Bootcam Frontend</h3>
+                <p class="formacion__detalle">En curso - ALURA</p>
+            </div>
+        </li>
+    </ul>
+</section>
+<div class="barra-divisoria2"></div>
+<!-- Sección de Proyectos -->
+<section class="proyectos" id="proyectos">
+
+    <h2 class="proyectos__titulo">Experiencia Profesional</h2>
+    <div class="proyectos__contenedor">
+        <h3 class="proyectos__nombre">Auxiliar administrativo</h3>
+        <p class="proyectos__descripcion">Me he desempeñado como Auxiliar Administrativo desde el 2013, en diferentes compañías como Compuredes, UNE y la Universidad de Antioquia.</p>
+    </div>
+    <div class="proyectos__contenedor">
+        <h3 class="proyectos__nombre">Tecnólogo de soporte informático</h3>
+        <p class="proyectos__descripcion">Desde julio de 2024 me he desempeñado como Tecnólogo de soporte informatico en la Uniersidad de Antioquia.</p>
+    </div>
+<hr class="dotted-line">
+<h3>Bordes de imagen</h3>
+<iframe class="If1" src="arboles.html" width="1000" height="500" allow="fullscreen" frameborder="0"></iframe>
+<br>
+<h3>Encriptador de texto</h3>
+
+<iframe class="If2" src="encriptador.html" allow="fullscreen" frameborder="0"></iframe>
+<iframe class="If3" src="matrix.html" allow="fullscreen" frameborder="0"></iframe>
+
+</section>
+
+
+<!-- Sección de Contacto -->
+<section class="contacto" id="contacto">
+    <h2 class="contacto__titulo">Contacto</h2>
+    <form class="contacto__formulario">
+        <input type="text" class="contacto__campo contacto__campo--nombre" placeholder="Nombre">
+<input type="email" class="contacto__campo contacto__campo--correo" placeholder="Correo Electrónico">
+<textarea class="contacto__campo contacto__campo--mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+        <button class="contacto__boton" type="submit">Enviar</button>
+    </form>
+</section>
+
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <h2>Sobre mí</h2>
+            <p>Técnico informático, gestor de redes y desarrollador web, apasionado por crear experiencias digitales únicas.</p>
+        </div>
+
+        <div class="footer-social">
+            <h2>Sígueme</h2>
+            <a href="https://github.com/afguerrero4" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/afguerrero4" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+
+        <div class="footer-contact">
+            <h2>Contáctame</h2>
+            <p>Email: <a href="mailto:afguerrero4@gmail.com">afguerrero4@gmail.com</a></p>
+        </div>
+    </div>
+    <p class="footer-copyright">© 2024 - Todos los derechos reservados | Andrés Felipe Guerrero Henao</p>
+</footer>
+<!--Scripts JS-->
+<script src="scripts/script.js" ></script>   
+</body>
+</html>
